@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Formular de înregistrare a cititorului</title>
+  <style>
+    body {
+      background-image: url('fundal_biblioteca.jpg'); /* Înlocuiește cu imaginea ta */
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+
+    .formular {
+      background-color: rgba(255, 200, 150, 0.8);
+      width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 5px;
+    }
+
+    .gen {
+      margin-bottom: 10px;
+    }
+
+    .checkbox {
+      margin: 10px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="formular">
+    <h2>Formularul de înregistrare a cititorului</h2>
+    <form>
+      <label for="nume">Nume, Prenume:</label>
+      <input type="text" id="nume" name="nume">
+
+      <label for="data">Data nașterii:</label>
+      <input type="date" id="data" name="data">
+
+      <label>Genul:</label>
+      <div class="gen">
+        <input type="radio" id="masculin" name="gen" value="M">
+        <label for="masculin">M</label>
+        <input type="radio" id="feminin" name="gen" value="F">
+        <label for="feminin">F</label>
+      </div>
+
+      <label for="regiune">Regiunea:</label>
+      <select id="regiune" name="regiune">
+        <option value="nord">Nord</option>
+        <option value="sud">Sud</option>
+        <option value="est">Est</option>
+        <option value="vest">Vest</option>
+      </select>
+
+      <label for="reguli">Regulile pentru cititori:</label>
+      <textarea id="reguli" rows="3" readonly>
+Accesul în bibliotecă este liber. Dacă doriți să accesați resurse ce nu sunt indicate, ne contactați.
+      </textarea>
+
+      <div class="checkbox">
+        <input type="checkbox" id="accept" name="accept">
+        <label for="accept">Acceptați regulile</label>
+      </div>
+
+      <button type="submit">Înregistrează</button>
+    </form>
+  </div>
+</body>
+</html>
